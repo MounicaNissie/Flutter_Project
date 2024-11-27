@@ -1,0 +1,42 @@
+import 'package:flutter/material.dart';
+
+
+void main(){
+  run App(const My App());
+
+  //hot reload -> when we save the small UI code gets displayed
+  //Directionally widget -> we need to specify the direction of text
+}
+//custom widget
+//Types of widget in terms of UI
+//1.stateless widget //-immutable //-the text wouldn't change at all no matter the clicks
+//2.stateful widget //- mutable
+
+//state:
+//stateless widget is a abstract class so we must implement the methods inside it
+
+class MyApp extends StatelessWidget {
+  //const StatelessWidget({ super.key });
+  //key -> a class that helps flutter to identify b/w widgets
+  // a specific key to a specific widget.
+  const MyApp({super.key});
+  @override
+  Widget build(BuildContext context){
+    //const -> tells that myApp()  doesnt need to instantiate again doesnt need to create again
+    // Design guidelines or Design System:
+    //1.material design -> created by google
+    //2.cupertino design -> created by apple.
+    return MaterialApp(
+      //Material app is global part only one material app can written.
+      //Scaffold looks after the local part and it can have 2 or 3.
+      home: Scaffold(
+        //Scaffold -> gives capabilitie to add everything related to material design.
+        //gives access to headers,footers etc..
+        body:  Center(
+          child: Text("Hello world"),
+        ),
+      )
+    );
+
+  }
+}
